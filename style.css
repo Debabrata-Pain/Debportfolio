@@ -1,4 +1,3 @@
-
 :root {
   --bg: #f8fafc;
   --text: #0f172a;
@@ -39,20 +38,8 @@ header {
   background: linear-gradient(135deg, #2563eb, #1e40af);
   padding: 80px 20px;
   color: #ffffff;
-  position: relative; /* enables absolute positioning for the toggle */
 }
 
-/* --- NEW: actual layout used in your HTML --- */
-.hero-inner {
-  max-width: 1100px;
-  margin: 0 auto;                  /* center the content inside the hero */
-  display: grid;
-  grid-template-columns: 120px 1fr;/* avatar left, text right */
-  gap: 24px;
-  align-items: center;
-}
-
-/* Optional containers (kept for compatibility) */
 .hero-container {
   max-width: 1100px;
   margin: auto;
@@ -99,17 +86,6 @@ header {
   border: 4px solid rgba(255, 255, 255, 0.8);
 }
 
-/* --- NEW: avatar class used in your HTML --- */
-.avatar {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-  display: block; /* prevents accidental inline collapsing */
-}
-
 /* Theme toggle */
 #themeToggle {
   position: absolute;
@@ -119,40 +95,44 @@ header {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  background: rgba(255,255,255,0.9);
-  color: #111827;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
 }
 
 /* ================= NAVBAR ================= */
 
-/* --- FIXED: add the dot to target the class --- */
 .nav-cards {
+  gap: 15px;
+  padding: 20px;
   max-width: 1100px;
-  margin: 16px auto 0;             /* sits outside the hero, below it */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* equal widths */
-  gap: 16px;
-  padding: 0 24px 8px;             /* horizontal breathing space */
+  margin: auto;
+  background: var(--bg);
 }
 
-.nav-cards .card {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  background: #fff;
-  color: #111827;
-  border-radius: 14px;
-  padding: 14px 18px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 18px;
+  text-align: center;
+  border-radius: 12px;
   font-weight: 600;
-  transition: transform 120ms ease, box-shadow 120ms ease;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
-.nav-cards .card:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card.active {
+  border: 2px solid var(--accent);
+  color: var(--accent);
 }
 
 /* ================= SECTIONS ================= */
@@ -256,21 +236,3 @@ footer {
   background: var(--card-bg);
   color: var(--text);
 }
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 720px) {
-  .hero-inner {
-    grid-template-columns: 1fr; /* stack avatar above text */
-    text-align: center;
-  }
-  .avatar { margin: 0 auto; }
-  .contact-inline { justify-content: center; }
-
-  .nav-cards { grid-template-columns: 1fr 1fr; } /* 2 cards per row */
-}
-
-@media (max-width: 420px) {
-  .nav-cards { grid-template-columns: 1fr; }     /* 1 card per row */
-}
-``
