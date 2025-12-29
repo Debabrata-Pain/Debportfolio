@@ -99,41 +99,34 @@ header {
 
 /* ================= NAVBAR ================= */
 
-.nav-cards {
-  gap: 15px;
-  padding: 20px;
+
+nav-cards {
   max-width: 1100px;
-  margin: auto;
-  background: var(--bg);
+  margin: 0 auto;                       /* centered under hero */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* equal widths */
+  gap: 16px;
+  padding: 0 24px 8px;                   /* horizontal breathing space */
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card {
-  background: var(--card-bg);
-  padding: 18px;
-  text-align: center;
-  border-radius: 12px;
-  font-weight: 600;
+.nav-cards .card {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  color: var(--text);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
+  background: #fff;
+  color: #111827;
+  border-radius: 14px;
+  padding: 14px 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  font-weight: 600;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.nav-cards .card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card.active {
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
 
 /* ================= SECTIONS ================= */
 
