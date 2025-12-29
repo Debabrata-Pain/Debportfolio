@@ -123,8 +123,6 @@ body {
   width: 100%;
   max-width: var(--page-max);
   margin: 32px auto 28px;            /* keep it centered below hero */
-  margin-right: 0px; /* pushes the whole box to the right */
-
   background: var(--card-bg);
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 30px var(--shadow);
@@ -132,8 +130,14 @@ body {
   display: flex;
   gap: 12px;
   justify-content: space-between;
-  position: relative;                 /* optional: for slight shifts if needed */
+  /*position: relative;                 /* optional: for slight shifts if needed */
   /* left: 0;                          leave at 0 to keep centered; add small px if you want to nudge right */
+
+  
+/* Add this to shift slightly right */
+  position: relative;
+  left: 20px; /* adjust value as needed (e.g., 10px, 20px, etc.) */
+
 }
 
 /* Each nav item as a pill card */
