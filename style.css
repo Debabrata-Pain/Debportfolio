@@ -115,14 +115,12 @@ body {
   backdrop-filter: blur(6px);
 }
 
-
-
 /* Nav container (the white box with rounded corners) */
 .nav-cards {
   width: 100%;
   /* make it wider than sections so it reaches further to the right */
   max-width: calc(var(--page-max) + 40px); /* try +20px, +40px, +60px till it looks right */
-  margin: 32px auto 28px;                  /* keep it centered below hero */
+  margin: 16px auto 28px;                  /* keep it centered below hero */
   background: var(--card-bg);
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 30px var(--shadow);
@@ -223,7 +221,7 @@ section {
 
 .project-card {
   background: var(--card-bg);
-  padding: 25px;
+  padding: 16px;
   border-radius: 16px;
   box-shadow: 0 12px 30px var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
