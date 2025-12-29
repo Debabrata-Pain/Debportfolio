@@ -116,11 +116,21 @@ section {
 }
 
 .section-card {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  animation: fadeUp 0.7s ease forwards;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px var(--shadow);
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .section-card h2 {
