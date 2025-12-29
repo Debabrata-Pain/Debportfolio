@@ -131,6 +131,12 @@ body {
   display: flex;
   gap: 12px;
   justify-content: space-between;
+
+  
+/* Add this to shift slightly right */
+  position: relative;
+  left: 20px; /* adjust value as needed (e.g., 10px, 20px, etc.) */
+
 }
 
 .card {
