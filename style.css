@@ -144,7 +144,7 @@ body {
 a.card {
   display: block;                     /* ensure the padding applies nicely */
   background: var(--card-bg);
-  padding: 16px 14px;
+  padding: 18px 16px;
   text-align: center;
   border-radius: var(--radius-md);
   font-weight: 600;
