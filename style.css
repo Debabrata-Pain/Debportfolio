@@ -123,6 +123,14 @@ section {
 
 .section-card {
   padding: 40px;
+  min-height: 320px;   /* adjust once to match Skills card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-card h2 {
+  margin-bottom: 20px;
 }
 
 .section-card {
