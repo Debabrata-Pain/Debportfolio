@@ -117,24 +117,15 @@ body {
 
 /* Nav container (the white box with rounded corners) */
 .nav-cards {
-  width: 100%;
-  /* make it wider than sections so it reaches further to the right */
-  max-width: calc(var(--page-max) + 40px); /* try +20px, +40px, +60px till it looks right */
-  margin: 32px auto 28px;                  /* keep it centered below hero */
+  max-width: 1100px;        /* EXACT same as section */
+  margin: 32px auto 28px;
+  padding: 24px;           /* same visual padding as cards */
   background: var(--card-bg);
-  border-radius: var(--radius-lg);
+  border-radius: 18px;
   box-shadow: 0 12px 30px var(--shadow);
 
-  /* make the box visually larger (height) */
-  padding: 24px;                            /* was 16px */
-
   display: flex;
-  gap: 14px;                                /* was 12px */
-  justify-content: space-between;
-
-  /* IMPORTANT: keep centering clean — no manual left/right offsets */
-  position: relative;
-  /* remove: left: 20px; */
+  gap: 14px;
 }
 
 /* Each nav item as a pill card */
