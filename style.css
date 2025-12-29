@@ -103,6 +103,14 @@ section {
     box-shadow: 0 10px 30px var(--shadow);
 }
 
+.about-me p {
+  text-align: justify;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  text-justify: inter-word; 
+}
+
+
 section {
     animation: fadeUp 0.7s ease forwards;
 }
