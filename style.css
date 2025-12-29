@@ -96,12 +96,12 @@ header {
 /* Sections */
 section {
     background: var(--card-bg);
-    margin: 40px auto;
-    padding: 40px;
+    margin: 24px auto;   /* ⬅ reduced gap */
     border-radius: 18px;
     max-width: 1100px;
     box-shadow: 0 10px 30px var(--shadow);
 }
+
 
 #about p {
   text-align: justify;
@@ -116,15 +116,23 @@ section {
 }
 
 .section-card {
-  min-height: 380px;            /* matches Skills visually */
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;  /* NOT center */
+  justify-content: flex-start;
+  animation: fadeUp 0.7s ease forwards;
 }
 
 .section-card h2 {
   margin-bottom: 20px;
+}
+
+section {
+  display: flex;
+}
+
+.section-card {
+  width: 100%;
 }
 
 .section-card {
