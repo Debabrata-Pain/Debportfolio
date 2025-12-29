@@ -116,46 +116,45 @@ body {
 }
 
 
-/* ================= NAVBAR (outside hero, below blue band) ================= */
 
 /* Nav container (the white box with rounded corners) */
 .nav-cards {
   width: 100%;
-  max-width: var(--page-max);
-  margin: 32px auto 28px;            /* keep it centered below hero */
+  /* make it wider than sections so it reaches further to the right */
+  max-width: calc(var(--page-max) + 40px); /* try +20px, +40px, +60px till it looks right */
+  margin: 32px auto 28px;                  /* keep it centered below hero */
   background: var(--card-bg);
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 30px var(--shadow);
-  padding: 16px;
+
+  /* make the box visually larger (height) */
+  padding: 24px;                            /* was 16px */
+
   display: flex;
-  gap: 12px;
+  gap: 14px;                                /* was 12px */
   justify-content: space-between;
-  /*position: relative;                 /* optional: for slight shifts if needed */
-  /* left: 0;                          leave at 0 to keep centered; add small px if you want to nudge right */
 
-  
-/* Add this to shift slightly right */
+  /* IMPORTANT: keep centering clean — no manual left/right offsets */
   position: relative;
-  left: 20px; /* adjust value as needed (e.g., 10px, 20px, etc.) */
-
+  /* remove: left: 20px; */
 }
 
 /* Each nav item as a pill card */
 a.card {
-  display: block;                     /* ensure the padding applies nicely */
+  display: block;
   background: var(--card-bg);
-  padding: 18px 16px;
+  padding: 18px 16px;                       /* slightly larger pill */
   text-align: center;
   border-radius: var(--radius-md);
   font-weight: 600;
   text-decoration: none;
-  box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.06); /* subtle inner border like Pic‑1 */
+  box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   color: var(--text);
-  flex: 1;                            /* equal width pills */
+  flex: 1;                                  /* equal width pills */
 }
 
-/* Normalize link states so they do NOT turn purple or underline */
+/* Normalize link states */
 a.card:link,
 a.card:visited,
 a.card:hover,
@@ -175,7 +174,7 @@ a.card.active {
   color: var(--accent);
 }
 
-/* Optional sticky behavior */
+/* Optional sticky */
 .sticky {
   position: sticky;
   top: 0;
@@ -188,7 +187,7 @@ a.card.active {
 section {
   max-width: var(--page-max);
   margin: 28px auto;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
 .section-card {
