@@ -122,7 +122,11 @@ body {
 .nav-cards {
   width: 100%;
   max-width: var(--page-max);
-  margin: 0px auto 28px;            /* keep it centered below hero */
+  margin: 32px auto 28px;            /* keep it centered below hero */
+  
+/* slight nudge to the right without breaking width */
+  transform: translateX(12px); /* try 8–20px as needed */
+
   background: var(--card-bg);
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 30px var(--shadow);
