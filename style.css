@@ -103,12 +103,6 @@ section {
     box-shadow: 0 10px 30px var(--shadow);
 }
 
-#about {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 40px;
-}
-
 #about p {
   text-align: justify;
   line-height: 1.8;
@@ -122,11 +116,11 @@ section {
 }
 
 .section-card {
+  min-height: 380px;            /* matches Skills visually */
   padding: 40px;
-  min-height: 320px;   /* adjust once to match Skills card */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;  /* NOT center */
 }
 
 .section-card h2 {
@@ -137,6 +131,9 @@ section {
   animation: fadeUp 0.7s ease forwards;
 }
 
+.section-card p {
+  margin: 0;
+}
 
 @keyframes fadeUp {
     from {
