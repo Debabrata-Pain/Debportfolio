@@ -131,10 +131,6 @@ section {
   animation: fadeUp 0.7s ease forwards;
 }
 
-.section-card p {
-  margin: 0;
-}
-
 @keyframes fadeUp {
     from {
         opacity: 0;
