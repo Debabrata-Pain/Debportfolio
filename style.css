@@ -123,9 +123,7 @@ body {
   width: 100%;
   max-width: var(--page-max);
   margin: 32px auto 28px;            /* keep it centered below hero */
-  
-/* slight nudge to the right without breaking width */
-  transform: translateX(12px); /* try 8–20px as needed */
+  margin-left: 20px; /* pushes the whole box to the right */
 
   background: var(--card-bg);
   border-radius: var(--radius-lg);
