@@ -121,23 +121,9 @@ body {
   Place the nav below the hero, on white, with a subtle shadow.
   Since it’s outside <header>, we just style spacing here.
 */
-/*.nav-cards {
+.nav-cards {
   max-width: var(--page-max);
   margin: 32px auto 28px; /* pull up a bit to visually sit near the hero edge 
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 12px 30px var(--shadow);
-  padding: 16px;
-  display: flex;
-  gap: 12px;
-  justify-content: space-between;
-*/
-  
-
-.nav-cards {
-  width: 100%; /* Take full width of its container */
-  max-width: var(--page-max); /* Same as About Me section */
-  margin: -32px auto 28px; /* Keep it centered and close to hero */
   background: var(--card-bg);
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 30px var(--shadow);
