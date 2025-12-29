@@ -122,7 +122,7 @@ body {
 .nav-cards {
   width: 100%;
   max-width: var(--page-max);
-  margin: 32px auto 28px;            /* keep it centered below hero */
+  margin: 0px auto 28px;            /* keep it centered below hero */
   background: var(--card-bg);
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 30px var(--shadow);
@@ -176,7 +176,7 @@ a.card.active {
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-  
+
 /* ================= SECTIONS ================= */
 
 section {
