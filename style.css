@@ -103,17 +103,32 @@ section {
     box-shadow: 0 10px 30px var(--shadow);
 }
 
-.about-me p {
+#about {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px;
+}
+
+#about p {
   text-align: justify;
-  line-height: 1.7;
-  letter-spacing: 0.2px;
-  text-justify: inter-word; 
+  line-height: 1.8;
+  font-size: 1.05rem;
+  letter-spacing: 0.15px;
+  max-width: 100%;
 }
 
-
-section {
-    animation: fadeUp 0.7s ease forwards;
+#about {
+  padding: 0;
 }
+
+.section-card {
+  padding: 40px;
+}
+
+.section-card {
+  animation: fadeUp 0.7s ease forwards;
+}
+
 
 @keyframes fadeUp {
     from {
@@ -252,16 +267,4 @@ footer {
   font-weight: 500;
   opacity: 0.9;
   margin-bottom: 20px;
-}
-
-.hero-meta {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  font-size: 15px;
-}
-
-.hero-meta a {
-  color: #ffffff;
-  text-decoration: underline;
 }
