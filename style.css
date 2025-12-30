@@ -8,7 +8,7 @@
 
   /* extra tokens for hero look & spacing */
   --hero-end: #1e40af;
-  --page-max: 1100px;
+  --page-max: 1065px;
   --radius-lg: 16px;
   --radius-md: 12px;
 }
@@ -112,14 +112,34 @@ body {
 /* Nav container (the white box with rounded corners) */
 .nav-cards {
   max-width: 1100px;        /* EXACT same as section */
-  margin: 16px auto 16px;
+  margin: 16px auto;
   padding: 20px;           /* same visual padding as cards */
   background: var(--card-bg);
   border-radius: 18px;
   box-shadow: 0 12px 30px var(--shadow);
 
   display: flex;
+  flex-direction: column;
   gap: 14px;
+}
+
+.nav-row {
+  display: flex;
+  gap: 14px;
+}
+
+/* keep pills equal width in first row */
+.nav-row:first-child a.card {
+  flex: 1;
+} 
+
+/* second row (Education) looks centered & neat */
+.nav-row:last-child {
+  justify-content: center;
+}
+
+.nav-row:last-child a.card {
+  flex: 0 0 220px;   /* fixed width for single button */
 }
 
 /* Each nav item as a pill card */
@@ -169,7 +189,7 @@ a.card.active {
 
 section {
   max-width: var(--page-max);
-  margin: 28px auto;
+  margin: 40px auto 40px calc(50% - 550px - 40px);
   padding: 0 20px;
 }
 
@@ -275,3 +295,50 @@ footer {
     justify-content: center;
   }
 }
+
+/* ================= EDUCATION ================= */
+
+.education-item {
+  margin-bottom: 1.8rem;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-item h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.edu-institute {
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 0.2rem;
+}
+
+.edu-meta {
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+.education-card {
+  grid-column: 2 / span 2; /* center under 4 buttons */
+}
+
+/* ===== FORCE NAV GRID LAYOUT ===== */
+.nav-cards {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.education-card {
+  grid-column: 2 / span 2;
+}
+
